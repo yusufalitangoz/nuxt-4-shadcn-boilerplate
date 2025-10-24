@@ -25,10 +25,7 @@ useHead({
 </script>
 
 <template>
-  <Html
-    :lang="head.htmlAttrs?.lang ?? 'en'"
-    :dir="head.htmlAttrs?.dir ?? 'ltr'"
-  >
+  <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
     <Head>
       <Title>{{ title }}</Title>
       <Meta :content="description" name="description" />

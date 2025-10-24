@@ -9,7 +9,7 @@ export default {
     },
   },
   error: {
-    button: "Go back to home",
+    goHome: "Go back to home",
   },
   colorMode: {
     light: "Light",

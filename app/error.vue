@@ -2,10 +2,10 @@
 import type { NuxtError } from "#app";
 
 const { error } = defineProps<{ error: NuxtError }>();
-const { statusCode } = error;
+const statusCode = error.statusCode.toString();
 
-useHead({
-  title: statusCode.toString(),
+defineOgImageComponent("Default", {
+  title: statusCode,
 });
 </script>
 
@@ -14,7 +14,7 @@ useHead({
     <h1 class="text-4xl font-extrabold mb-5">{{ statusCode }}</h1>
     <Button as-child>
       <NuxtLinkLocale to="/">
-        {{ $t("error.button") }}
+        {{ $t("error.goHome") }}
       </NuxtLinkLocale>
     </Button>
     <DevOnly>

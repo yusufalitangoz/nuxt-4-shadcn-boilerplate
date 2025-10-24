@@ -9,7 +9,7 @@ export default {
     },
   },
   error: {
-    button: "Ana sayfaya dön",
+    goHome: "Ana sayfaya dön",
   },
   colorMode: {
     light: "Açık",
