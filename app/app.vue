@@ -7,20 +7,15 @@ const route = useRoute();
 const { t } = useI18n();
 
 const description = computed(() =>
-  t((route.meta.description as string) ?? "nuxtSiteConfig.description"),
+  route.meta.description ? t(route.meta.description as string) : undefined,
 );
 const title = computed(() =>
-  t((route.meta.title as string) ?? "nuxtSiteConfig.name"),
+  route.meta.title ? t(route.meta.title as string) : undefined,
 );
-const siteName = computed(() => t("nuxtSiteConfig.name"));
 
 defineOgImageComponent("Default", {
   description,
   title,
-});
-
-useHead({
-  titleTemplate: `%s %separator ${siteName.value}`,
 });
 </script>
 

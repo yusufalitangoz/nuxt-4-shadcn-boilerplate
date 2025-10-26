@@ -6,7 +6,6 @@ const statusCode = error.statusCode.toString();
 
 defineOgImageComponent("Default", {
   title: statusCode,
-  description: "",
 });
 </script>
 
