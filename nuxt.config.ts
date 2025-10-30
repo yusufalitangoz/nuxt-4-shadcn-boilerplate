@@ -59,12 +59,6 @@ export default defineNuxtConfig({
     componentDir: "./app/components/ui",
     prefix: "",
   },
-  security: {
-    rateLimiter: {
-      tokensPerInterval: 200,
-      interval: 10000,
-    },
-  },
   svgo: {
     autoImportPath: false,
   },
