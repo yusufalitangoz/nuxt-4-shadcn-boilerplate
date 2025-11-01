@@ -1,5 +1,3 @@
-import type { LinkGroup } from "../types";
-
 export const useLinkGroupsStore = defineStore("link-groups", () => {
   const localePath = useLocalePath();
   const { t } = useI18n();
