@@ -1,5 +1,4 @@
 @config '../../../tailwind.config.ts';
-@import "tw-animate-css";
 @import "tailwindcss";
 
 @theme inline {
