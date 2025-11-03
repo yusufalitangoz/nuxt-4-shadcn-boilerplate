@@ -1,11 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
 
-const baseUrl = process.env.BASE_URL;
-
 export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
-    "@zadigetvoltaire/nuxt-well-known",
     "pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/color-mode",
     "@vee-validate/nuxt",
@@ -37,30 +34,16 @@ export default defineNuxtConfig({
         code: "en",
       },
     ],
+    baseUrl: process.env.BASE_URL,
     defaultLocale: "tr",
-    baseUrl,
-  },
-  wellKnown: {
-    securityTxt: {
-      canonical: [`${baseUrl}/.well-known/security.txt`],
-      expires: new Date("2026-06-11").toISOString(),
-      contacts: ["mailto:you@domain.com"],
-      preferredLanguages: ["tr", "en"],
-      disabled: false,
-    },
-    devtools: true,
   },
   css: ["~/assets/css/tailwind.css"],
-  compatibilityDate: "2025-06-11",
+  compatibilityDate: "2025-11-03",
   vite: {
     plugins: [tailwindcss()],
   },
   shadcn: {
-    componentDir: "./app/components/ui",
     prefix: "",
-  },
-  svgo: {
-    autoImportPath: false,
   },
   robots: {
     blockNonSeoBots: true,
