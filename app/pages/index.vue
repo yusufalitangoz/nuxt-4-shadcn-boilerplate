@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { Field as VeeField } from "vee-validate";
 import packageJson from "../../package.json";
 import { toast } from "vue-sonner";
-import z from "zod";
+import { z } from "zod";
 
 definePageMeta({
   description: "nuxtSiteConfig.description",
@@ -10,14 +11,14 @@ definePageMeta({
 
 const loading = ref(false);
 
-const formSchema = toTypedSchema(
+const validationSchema = toTypedSchema(
   z.object({
-    username: z.string().min(2).max(50),
+    key: z.string().min(5).max(32),
   }),
 );
 
-const { isFieldDirty, handleSubmit } = useForm({
-  validationSchema: formSchema,
+const { handleSubmit, resetForm } = useForm({
+  validationSchema,
 });
 
 const onSubmit = handleSubmit(async (values) => {
@@ -64,29 +65,41 @@ const onSubmit = handleSubmit(async (values) => {
         </Button>
       </div>
     </div>
-    <pre class="text-xs border p-5 rounded-lg overflow-auto w-full max-w-max">{{
-      packageJson
-    }}</pre>
-    <form class="space-y-6 mt-12" @submit="onSubmit">
-      <FormField
-        v-slot="{ componentField }"
-        name="username"
-        :validate-on-blur="!isFieldDirty"
-      >
-        <FormItem>
-          <FormLabel>Username</FormLabel>
-          <FormControl>
-            <Input
-              type="password"
-              placeholder="Username"
-              v-bind="componentField"
-            />
-          </FormControl>
-          <FormDescription> Username description. </FormDescription>
-          <FormMessage />
-        </FormItem>
-      </FormField>
-      <Button type="submit" :loading> Submit </Button>
-    </form>
+    <Card class="overflow-auto w-full p-0 sm:max-w-[800px]">
+      <pre class="overflow-auto w-full p-6">{{ packageJson }}</pre>
+    </Card>
+    <Card class="w-full sm:max-w-md mt-12">
+      <CardHeader>
+        <CardTitle>Example Form</CardTitle>
+        <CardDescription> Example Form </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form id="example-form" @submit="onSubmit">
+          <FieldGroup>
+            <VeeField v-slot="{ field, errors }" name="key">
+              <Field :data-invalid="!!errors.length">
+                <FieldLabel for="example-form-key"> Key </FieldLabel>
+                <Input
+                  id="example-form-key"
+                  :aria-invalid="!!errors.length"
+                  placeholder="Your key"
+                  type="password"
+                  v-bind="field"
+                />
+                <FieldError v-if="errors.length" :errors="errors" />
+              </Field>
+            </VeeField>
+          </FieldGroup>
+        </form>
+      </CardContent>
+      <CardFooter>
+        <Field orientation="horizontal">
+          <Button type="button" variant="outline" @click="resetForm">
+            Reset
+          </Button>
+          <Button type="submit" form="example-form" :loading> Submit </Button>
+        </Field>
+      </CardFooter>
+    </Card>
   </section>
 </template>

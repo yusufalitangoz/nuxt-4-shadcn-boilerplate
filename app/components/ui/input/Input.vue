@@ -34,6 +34,7 @@ watchEffect(() => {
     <input
       v-model="modelValue"
       data-slot="input"
+      v-bind="$attrs"
       :type="showPassword ? 'text' : type"
       :class="
         cn(
@@ -52,7 +53,7 @@ watchEffect(() => {
     >
       <Icon
         :name="showPassword ? 'lucide:eye-closed' : 'lucide:eye'"
-        class="w-4 h-4"
+        class="size-4"
       />
     </div>
   </div>

@@ -10,13 +10,15 @@ defineOgImageComponent("Default", {
 </script>
 
 <template>
-  <main class="h-screen flex justify-center items-center flex-col">
-    <h1 class="text-4xl font-extrabold mb-5">{{ statusCode }}</h1>
+  <main class="h-screen flex justify-center items-center flex-col container">
+    <h1 class="text-4xl font-extrabold mb-4">{{ statusCode }}</h1>
     <Button @click="clearError({ redirect: $localePath('/') })">
       {{ $t("error.goHome") }}
     </Button>
     <DevOnly>
-      {{ error }}
+      <p class="mt-4">
+        {{ error }}
+      </p>
     </DevOnly>
   </main>
 </template>
