@@ -13,7 +13,7 @@ const loading = ref(false);
 
 const validationSchema = toTypedSchema(
   z.object({
-    key: z.string().min(5).max(32),
+    name: z.string().min(5).max(32),
   }),
 );
 
@@ -76,13 +76,13 @@ const onSubmit = handleSubmit(async (values) => {
       <CardContent>
         <form id="example-form" @submit="onSubmit">
           <FieldGroup>
-            <VeeField v-slot="{ field, errors }" name="key">
+            <VeeField v-slot="{ field, errors }" name="name">
               <Field :data-invalid="!!errors.length">
-                <FieldLabel for="example-form-key"> Key </FieldLabel>
+                <FieldLabel for="example-form-name"> Name </FieldLabel>
                 <Input
-                  id="example-form-key"
+                  id="example-form-name"
                   :aria-invalid="!!errors.length"
-                  placeholder="Your key"
+                  placeholder="Your name"
                   type="password"
                   v-bind="field"
                 />
