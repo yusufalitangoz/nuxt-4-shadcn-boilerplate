@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { useLinkGroupsStore } from "~/stores/link-groups";
 import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
-import type { LocaleObject } from "@nuxtjs/i18n";
+import { useLinkGroupsStore } from "~/stores/link-groups";
 
 const [DefineNavigationMenu, ReuseNavigationMenu] = createReusableTemplate();
 const { general } = storeToRefs(useLinkGroupsStore());
@@ -9,7 +8,7 @@ const switchLocalePath = useSwitchLocalePath();
 const { locale, locales } = useI18n();
 const colorMode = useColorMode();
 
-const availableLocales = computed<LocaleObject[]>(() =>
+const availableLocales = computed(() =>
   locales.value.filter(({ code }) => code !== locale.value),
 );
 
