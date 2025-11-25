@@ -45,8 +45,8 @@ const colorModeIcons = new Map<string, string>([
         <ReuseNavigationMenu class="hidden md:flex" />
       </div>
       <div>
-        <DropdownMenu>
-          <ClientOnly>
+        <ClientOnly>
+          <DropdownMenu>
             <DropdownMenuTrigger as-child>
               <Button
                 size="icon"
@@ -59,19 +59,19 @@ const colorModeIcons = new Map<string, string>([
                 />
               </Button>
             </DropdownMenuTrigger>
-          </ClientOnly>
-          <DropdownMenuContent>
-            <DropdownMenuItem @click="colorMode.preference = 'light'">
-              {{ $t("colorMode.light") }}
-            </DropdownMenuItem>
-            <DropdownMenuItem @click="colorMode.preference = 'dark'">
-              {{ $t("colorMode.dark") }}
-            </DropdownMenuItem>
-            <DropdownMenuItem @click="colorMode.preference = 'system'">
-              {{ $t("colorMode.system") }}
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+            <DropdownMenuContent>
+              <DropdownMenuItem @click="colorMode.preference = 'light'">
+                {{ $t("colorMode.light") }}
+              </DropdownMenuItem>
+              <DropdownMenuItem @click="colorMode.preference = 'dark'">
+                {{ $t("colorMode.dark") }}
+              </DropdownMenuItem>
+              <DropdownMenuItem @click="colorMode.preference = 'system'">
+                {{ $t("colorMode.system") }}
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </ClientOnly>
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button size="icon" variant="outline" aria-label="Language Menu">
