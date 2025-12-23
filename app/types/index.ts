@@ -1,10 +1,10 @@
 export type Link = {
-  name: string;
   icon?: string;
+  name: string;
   to: string;
 };
 
 export type LinkGroup = {
-  name: string;
   links: Link[];
+  name: string;
 };
