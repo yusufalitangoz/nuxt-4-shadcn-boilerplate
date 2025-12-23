@@ -7,7 +7,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
 
 <template>
   <footer class="border-t w-full text-sm">
-    <nav class="container pt-10 pb-7 grid md:grid-cols-2 items-start gap-10">
+    <nav class="container pt-10 pb-7 grid md:grid-cols-2 items-start">
       <div class="grid place-items-start gap-3 h-full">
         <LayoutLogo />
         <div class="flex flex-wrap gap-2 mt-auto">
@@ -43,9 +43,8 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
           </NavigationMenu>
         </div>
       </div>
-      <span
-        class="text-center md:col-span-2 text-muted-foreground border-t pt-7"
-      >
+      <Separator class="md:col-span-2 my-6" />
+      <span class="text-center md:col-span-2 text-muted-foreground">
         © {{ new Date().getFullYear() }}
       </span>
     </nav>

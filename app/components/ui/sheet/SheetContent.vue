@@ -48,11 +48,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
           props.class,
         )
       "
-      v-bind="{ ...forwarded, ...$attrs }"
+      v-bind="{ ...$attrs, ...forwarded }"
     >
       <slot />
+
       <DialogClose
-        class="grid place-items-center ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none"
+        class="size-4.5 ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none"
       >
         <Icon name="lucide:x" class="size-4" />
         <span class="sr-only">Close</span>
