@@ -1,7 +1,7 @@
 <template>
   <div>
     <LayoutHeader />
-    <main class="pt-[65px] min-h-screen">
+    <main class="pt-16.25 min-h-screen">
       <slot />
     </main>
     <LayoutFooter />
