@@ -4,19 +4,11 @@ import { useLinkGroupsStore } from "~/stores/link-groups";
 
 const [DefineNavigationMenu, ReuseNavigationMenu] = createReusableTemplate();
 const { general } = storeToRefs(useLinkGroupsStore());
-const switchLocalePath = useSwitchLocalePath();
 const { locale, locales } = useI18n();
-const colorMode = useColorMode();
 
 const availableLocales = computed(() =>
   locales.value.filter(({ code }) => code !== locale.value),
 );
-
-const colorModeIcons = new Map<string, string>([
-  ["system", "lucide:monitor"],
-  ["dark", "lucide:moon"],
-  ["light", "lucide:sun"],
-]);
 </script>
 
 <template>
@@ -49,24 +41,30 @@ const colorModeIcons = new Map<string, string>([
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
               <Button
-                size="icon"
-                variant="outline"
                 aria-label="Color Mode Menu"
+                variant="outline"
+                size="icon"
               >
                 <Icon
-                  :name="colorModeIcons.get(colorMode.preference)!"
+                  :name="
+                    $colorMode.preference === 'system'
+                      ? 'lucide:monitor'
+                      : $colorMode.preference === 'dark'
+                        ? 'lucide:moon'
+                        : 'lucide:sun'
+                  "
                   size="18"
                 />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem @click="colorMode.preference = 'light'">
+              <DropdownMenuItem @click="$colorMode.preference = 'light'">
                 {{ $t("colorMode.light") }}
               </DropdownMenuItem>
-              <DropdownMenuItem @click="colorMode.preference = 'dark'">
+              <DropdownMenuItem @click="$colorMode.preference = 'dark'">
                 {{ $t("colorMode.dark") }}
               </DropdownMenuItem>
-              <DropdownMenuItem @click="colorMode.preference = 'system'">
+              <DropdownMenuItem @click="$colorMode.preference = 'system'">
                 {{ $t("colorMode.system") }}
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -84,7 +82,7 @@ const colorModeIcons = new Map<string, string>([
               :key="code"
               as-child
             >
-              <NuxtLink :to="switchLocalePath(code)">
+              <NuxtLink :to="$switchLocalePath(code)">
                 {{ name }}
               </NuxtLink>
             </DropdownMenuItem>
