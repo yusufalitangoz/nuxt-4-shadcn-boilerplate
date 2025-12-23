@@ -20,6 +20,8 @@ export default defineNuxtConfig({
     "nuxt-svgo",
   ],
   i18n: {
+    baseUrl: process.env.BASE_URL,
+    defaultLocale: "tr",
     locales: [
       {
         language: "tr-TR",
@@ -34,33 +36,28 @@ export default defineNuxtConfig({
         code: "en",
       },
     ],
-    baseUrl: process.env.BASE_URL,
-    defaultLocale: "tr",
   },
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2025-11-03",
   vite: {
     plugins: [tailwindcss()],
   },
-  shadcn: {
-    prefix: "",
-  },
   robots: {
     blockNonSeoBots: true,
   },
-  sitemap: {
-    autoLastmod: true,
+  typescript: {
+    typeCheck: true,
   },
   imports: {
     dirs: ["types"],
-  },
-  typescript: {
-    typeCheck: true,
   },
   colorMode: {
     classSuffix: "",
   },
   devtools: {
     enabled: true,
+  },
+  shadcn: {
+    prefix: "",
   },
 });

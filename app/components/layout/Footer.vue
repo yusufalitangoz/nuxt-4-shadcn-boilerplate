@@ -28,9 +28,9 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
       </div>
       <div class="flex flex-wrap gap-10 md:justify-end">
         <div v-for="{ name, links } in [general]" :key="name" class="space-y-3">
-          <h1 class="font-semibold">{{ name }}</h1>
+          <h1 class="font-medium text-muted-foreground">{{ name }}</h1>
           <NavigationMenu>
-            <NavigationMenuList class="grid -ml-4">
+            <NavigationMenuList class="grid -ml-4 gap-0">
               <NavigationMenuItem
                 v-for="{ name: linkName, to } in links"
                 :key="to"
