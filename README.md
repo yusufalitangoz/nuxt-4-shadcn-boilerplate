@@ -73,7 +73,7 @@ cd nuxt-4-shadcn-boilerplate
 2. Install dependencies:
 
 ```bash
-bun install
+bun i
 ```
 
 3. Create `.env` file and write the values ​​from `.env.example`:
