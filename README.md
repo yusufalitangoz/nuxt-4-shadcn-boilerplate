@@ -34,7 +34,7 @@ A modern, full-featured boilerplate for building web applications with Nuxt 4 an
 
 ### UI & UX
 
-- **Icons**: [Lucide](https://lucide.dev) via [@nuxt/icon](https://github.com/nuxt-modules/icon)
+- **Icons**: [@nuxt/icon](https://github.com/nuxt-modules/icon)
 - **Fonts**: [@nuxt/fonts](https://github.com/nuxt-modules/fonts)
 - **Images**: [@nuxt/image](https://image.nuxt.com)
 - **Notifications**: [Vue Sonner](https://vue-sonner.vercel.app)
