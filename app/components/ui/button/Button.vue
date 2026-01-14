@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
     :class="cn(buttonVariants({ variant, size }), props.class)"
     :disabled="loading || disabled"
   >
-    <Icon v-if="loading" name="lucide:loader" class="animate-spin" size="22" />
+    <Spinner v-if="loading" />
     <slot v-else />
   </Primitive>
 </template>

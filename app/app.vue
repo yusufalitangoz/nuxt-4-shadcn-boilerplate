@@ -38,7 +38,9 @@ defineOgImageComponent("Default", {
     <Body>
       <NuxtLoadingIndicator />
       <NuxtRouteAnnouncer />
-      <Toaster />
+      <ClientOnly>
+        <Toaster />
+      </ClientOnly>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
