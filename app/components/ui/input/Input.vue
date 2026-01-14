@@ -25,7 +25,7 @@ const showPassword = ref(false);
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative w-full">
     <input
       v-model="modelValue"
       :type="showPassword ? 'text' : type"
