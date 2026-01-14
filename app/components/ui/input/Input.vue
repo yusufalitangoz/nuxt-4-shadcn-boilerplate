@@ -41,15 +41,17 @@ const showPassword = ref(false);
         )
       "
     />
-    <div
+    <Button
       v-if="type === 'password'"
-      class="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center cursor-pointer text-gray-400 hover:text-gray-500 transition-colors"
+      class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-foreground"
+      variant="link"
+      size="icon"
       @click="showPassword = !showPassword"
     >
       <Icon
         :name="showPassword ? 'lucide:eye-closed' : 'lucide:eye'"
         class="size-4"
       />
-    </div>
+    </Button>
   </div>
 </template>
