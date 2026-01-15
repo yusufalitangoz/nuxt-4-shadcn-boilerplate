@@ -7,7 +7,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
 
 <template>
   <footer class="border-t w-full text-sm">
-    <nav class="container pt-10 pb-7 grid md:grid-cols-2 items-start gap-8">
+    <nav class="container pt-10 pb-7 grid md:grid-cols-2 items-start">
       <div class="grid place-items-start gap-3 h-full">
         <LayoutLogo />
         <div class="flex flex-wrap gap-2 mt-auto">
