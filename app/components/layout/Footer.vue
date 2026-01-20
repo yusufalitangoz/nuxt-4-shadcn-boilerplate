@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
-import { useLinkGroupsStore } from "~/stores/link-groups";
 
 const { social, general } = storeToRefs(useLinkGroupsStore());
 </script>
