@@ -33,6 +33,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
               <NavigationMenuItem
                 v-for="{ name: linkName, to } in links"
                 :key="to"
+                as-child
               >
                 <NuxtLink :class="navigationMenuTriggerStyle()" :to="to">
                   {{ linkName }}
