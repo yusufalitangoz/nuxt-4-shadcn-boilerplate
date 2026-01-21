@@ -122,6 +122,6 @@
 
 @layer components {
   .container {
-    @apply 2xl:max-w-350! px-4 mx-auto;
+    @apply 2xl:max-w-350 px-4 mx-auto;
   }
 }
