@@ -45,12 +45,13 @@ const showPassword = ref(false);
       v-if="type === 'password'"
       class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-foreground"
       variant="link"
+      type="button"
       size="icon"
       @click="showPassword = !showPassword"
     >
       <Icon
         :name="showPassword ? 'lucide:eye-closed' : 'lucide:eye'"
-        class="size-4"
+        size="16"
       />
     </Button>
   </div>
