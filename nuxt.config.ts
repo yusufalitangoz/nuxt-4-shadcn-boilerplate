@@ -42,11 +42,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  ogImage: {
-    defaults: {
-      renderer: "satori",
-    },
-  },
   robots: {
     blockNonSeoBots: true,
   },
