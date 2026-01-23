@@ -5,7 +5,6 @@ const { error } = defineProps<{ error: NuxtError }>();
 
 defineOgImageComponent("Default", {
   title: error.status,
-  description: "sasa",
 });
 </script>
 
