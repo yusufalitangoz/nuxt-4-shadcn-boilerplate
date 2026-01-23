@@ -20,7 +20,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
             as-child
           >
             <NuxtLink target="_blank" :to="to">
-              <Icon :name="icon!" size="17" />
+              <Icon :name="icon!" />
             </NuxtLink>
           </Button>
         </div>

@@ -49,10 +49,7 @@ const showPassword = ref(false);
       size="icon"
       @click="showPassword = !showPassword"
     >
-      <Icon
-        :name="showPassword ? 'lucide:eye-closed' : 'lucide:eye'"
-        size="16"
-      />
+      <Icon :name="showPassword ? 'lucide:eye-closed' : 'lucide:eye'" />
     </Button>
   </div>
 </template>

@@ -11,7 +11,6 @@ const props = defineProps<{
     name="lucide:loader-circle"
     role="status"
     aria-label="Loading"
-    size="18"
     :class="cn('animate-spin', props.class)"
   />
 </template>

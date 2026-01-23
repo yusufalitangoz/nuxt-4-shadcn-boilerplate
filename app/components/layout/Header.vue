@@ -56,7 +56,6 @@ const availableLocales = computed(() =>
                         ? 'lucide:moon'
                         : 'lucide:sun'
                   "
-                  size="18"
                 />
               </Button>
             </DropdownMenuTrigger>
@@ -76,7 +75,7 @@ const availableLocales = computed(() =>
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button size="icon" variant="outline" aria-label="Language Menu">
-              <Icon name="lucide:globe" size="18" />
+              <Icon name="lucide:globe" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -94,7 +93,7 @@ const availableLocales = computed(() =>
         <Sheet>
           <SheetTrigger class="flex md:hidden" as-child>
             <Button variant="outline" size="icon" aria-label="Header Menu">
-              <Icon name="lucide:menu" size="20" />
+              <Icon name="lucide:menu" />
             </Button>
           </SheetTrigger>
           <SheetContent class="p-4">

@@ -57,6 +57,9 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  icon: {
+    mode: "svg",
+  },
   shadcn: {
     prefix: "",
   },
