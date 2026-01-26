@@ -54,9 +54,6 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
-  ogImage: {
-    enabled: false,
-  },
   devtools: {
     enabled: true,
   },
