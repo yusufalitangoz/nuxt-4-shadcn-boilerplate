@@ -37,6 +37,11 @@ export default defineNuxtConfig({
       },
     ],
   },
+  fonts: {
+    defaults: {
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    },
+  },
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-01-14",
   vite: {
