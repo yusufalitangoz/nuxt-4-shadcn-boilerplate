@@ -56,6 +56,9 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["types"],
   },
+  ogImage: {
+    enabled: false,
+  },
   colorMode: {
     classSuffix: "",
   },
