@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-01-14",
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as []],
   },
   robots: {
     blockNonSeoBots: true,
