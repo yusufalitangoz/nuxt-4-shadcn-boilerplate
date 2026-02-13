@@ -2,15 +2,18 @@
 import "vue-sonner/style.css";
 
 const head = useLocaleHead();
+const { t, te } = useI18n();
 const route = useRoute();
-const { t } = useI18n();
 
-const description = computed(() =>
-  route.meta.description ? t(route.meta.description as string) : undefined,
-);
-const title = computed(() =>
-  route.meta.title ? t(route.meta.title as string) : undefined,
-);
+const description = computed(() => {
+  const value = route.meta.description as string | undefined;
+  return value && te(value) ? t(value) : value;
+});
+
+const title = computed(() => {
+  const value = route.meta.title as string | undefined;
+  return value && te(value) ? t(value) : value;
+});
 
 defineOgImageComponent("Default", {
   description,
