@@ -89,7 +89,7 @@ const onSubmit = handleSubmit(async (values) => {
                   type="password"
                   v-bind="field"
                 />
-                <FieldError v-if="errors.length" :errors="errors" />
+                <FieldError v-if="errors.length" :errors />
               </Field>
             </VeeField>
           </FieldGroup>

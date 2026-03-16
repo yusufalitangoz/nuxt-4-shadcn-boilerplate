@@ -20,11 +20,11 @@ const availableLocales = computed(() =>
           as-child
         >
           <SheetClose v-if="sheetClose">
-            <NuxtLink :class="navigationMenuTriggerStyle()" :to="to">
+            <NuxtLink :class="navigationMenuTriggerStyle()" :to>
               {{ name }}
             </NuxtLink>
           </SheetClose>
-          <NuxtLink v-else :class="navigationMenuTriggerStyle()" :to="to">
+          <NuxtLink v-else :class="navigationMenuTriggerStyle()" :to>
             {{ name }}
           </NuxtLink>
         </NavigationMenuItem>

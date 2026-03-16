@@ -19,7 +19,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
             size="icon"
             as-child
           >
-            <NuxtLink target="_blank" :to="to">
+            <NuxtLink target="_blank" :to>
               <Icon :name="icon!" />
             </NuxtLink>
           </Button>
@@ -35,7 +35,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
                 :key="to"
                 as-child
               >
-                <NuxtLink :class="navigationMenuTriggerStyle()" :to="to">
+                <NuxtLink :class="navigationMenuTriggerStyle()" :to>
                   {{ linkName }}
                 </NuxtLink>
               </NavigationMenuItem>
