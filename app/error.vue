@@ -3,8 +3,8 @@ import type { NuxtError } from "#app";
 
 const { error } = defineProps<{ error: NuxtError }>();
 
-defineOgImageComponent("Default", {
-  title: error.status,
+defineOgImage("Default", {
+  title: error.status?.toString(),
 });
 </script>
 

@@ -38,9 +38,13 @@ export default defineNuxtConfig({
     ],
   },
   fonts: {
-    defaults: {
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
+    families: [
+      {
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        name: "Roboto",
+        global: true,
+      },
+    ],
   },
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-01-14",
@@ -55,9 +59,6 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: ["types"],
-  },
-  ogImage: {
-    enabled: false,
   },
   colorMode: {
     classSuffix: "",

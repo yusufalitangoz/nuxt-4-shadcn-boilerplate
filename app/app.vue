@@ -15,9 +15,9 @@ const title = computed(() => {
   return value && te(value) ? t(value) : value;
 });
 
-defineOgImageComponent("Default", {
-  description,
-  title,
+defineOgImage("Default", {
+  description: description.value,
+  title: title.value,
 });
 </script>
 

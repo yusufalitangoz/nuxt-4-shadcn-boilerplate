@@ -1,7 +1,7 @@
 export default {
   nuxtSiteConfig: {
     name: "Nuxt 4 + Shadcn Başlangıç Şablonu",
-    description: "Shadcn ile bir Nuxt 4 başlangıç şablonu",
+    description: "Shadcn ile Nuxt 4 başlangıç şablonu",
   },
   meta: {
     home: {
