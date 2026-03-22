@@ -79,7 +79,7 @@ bun i
 3. Create `.env` file and write the values ​​from `.env.example`:
 
 ```bash
-BASE_URL="http://localhost:3000"
+NUXT_PUBLIC_I18N_BASE_URL="http://localhost:3000"
 ```
 
 4. Start development:
