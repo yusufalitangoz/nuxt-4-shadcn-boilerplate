@@ -35,7 +35,7 @@ const onSubmit = handleSubmit(async (values) => {
 <template>
   <section class="container my-16 grid place-items-center">
     <div class="grid text-center">
-      <h1 class="text-5xl font-bold mb-3">
+      <h1 class="text-5xl mb-3 font-semibold">
         {{ $t("nuxtSiteConfig.name") }}
       </h1>
       <p class="text-3xl text-muted-foreground">

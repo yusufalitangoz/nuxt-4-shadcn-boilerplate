@@ -10,7 +10,7 @@ defineOgImage("Default", {
 
 <template>
   <main class="h-screen flex justify-center items-center flex-col container">
-    <h1 class="text-4xl font-extrabold mb-4">{{ error.status }}</h1>
+    <h1 class="text-4xl mb-4 font-semibold">{{ error.status }}</h1>
     <Button @click="clearError({ redirect: $localePath('/') })">
       {{ $t("error.goHome") }}
     </Button>

@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        weights: [400, 500, 600],
         name: "Roboto",
         global: true,
       },
