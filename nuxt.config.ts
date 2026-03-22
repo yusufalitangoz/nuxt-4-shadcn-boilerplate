@@ -19,8 +19,28 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-svgo",
   ],
+  runtimeConfig: {
+    public: {
+      i18n: {
+        baseUrl: process.env.BASE_URL,
+      },
+    },
+  },
+  css: ["~/assets/css/tailwind.css"],
+  compatibilityDate: "2026-01-14",
+  vite: {
+    plugins: [tailwindcss() as []],
+  },
+  fonts: {
+    families: [
+      {
+        weights: [400, 500, 600],
+        name: "Roboto",
+        global: true,
+      },
+    ],
+  },
   i18n: {
-    baseUrl: process.env.BASE_URL,
     defaultLocale: "tr",
     locales: [
       {
@@ -36,20 +56,6 @@ export default defineNuxtConfig({
         code: "en",
       },
     ],
-  },
-  fonts: {
-    families: [
-      {
-        weights: [400, 500, 600],
-        name: "Roboto",
-        global: true,
-      },
-    ],
-  },
-  css: ["~/assets/css/tailwind.css"],
-  compatibilityDate: "2026-01-14",
-  vite: {
-    plugins: [tailwindcss() as []],
   },
   robots: {
     blockNonSeoBots: true,
