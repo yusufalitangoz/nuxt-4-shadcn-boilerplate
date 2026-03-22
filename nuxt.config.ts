@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
   ],
   css: ["~/assets/css/tailwind.css"],
-  compatibilityDate: "2026-01-14",
+  compatibilityDate: "2026-03-22",
   vite: {
     plugins: [tailwindcss() as []],
   },

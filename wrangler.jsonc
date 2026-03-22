@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nuxt-4-shadcn-boilerplate",
+  "compatibility_date": "2026-03-22",
   "vars": {
     "BASE_URL": "https://boilerplate.yali.dev",
   },
