@@ -19,13 +19,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-svgo",
   ],
-  runtimeConfig: {
-    public: {
-      i18n: {
-        baseUrl: process.env.BASE_URL,
-      },
-    },
-  },
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-01-14",
   vite: {
@@ -41,6 +34,7 @@ export default defineNuxtConfig({
     ],
   },
   i18n: {
+    baseUrl: process.env.BASE_URL,
     defaultLocale: "tr",
     locales: [
       {

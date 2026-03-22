@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nuxt-4-shadcn-boilerplate",
+  "vars": {
+    "BASE_URL": "https://boilerplate.yali.dev",
+  },
+}
