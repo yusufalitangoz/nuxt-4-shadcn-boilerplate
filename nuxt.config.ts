@@ -24,13 +24,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss() as []],
   },
-  runtimeConfig: {
-    public: {
-      i18n: {
-        baseUrl: process.env.BASE_URL,
-      },
-    },
-  },
   fonts: {
     families: [
       {
