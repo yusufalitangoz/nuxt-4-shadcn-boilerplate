@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
   ],
   i18n: {
-    baseUrl: process.env.BASE_URL,
+    baseUrl: "https://boilerplate.yali.dev" /* process.env.BASE_URL */,
     defaultLocale: "tr",
     locales: [
       {
