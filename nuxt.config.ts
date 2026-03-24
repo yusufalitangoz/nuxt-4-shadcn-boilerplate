@@ -71,7 +71,4 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: "",
   },
-  security: {
-    enabled: false,
-  },
 });
