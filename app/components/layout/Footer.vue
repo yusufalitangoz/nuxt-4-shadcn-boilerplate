@@ -6,7 +6,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
 
 <template>
   <footer class="border-t w-full text-sm">
-    <nav class="container pt-10 pb-7 grid md:grid-cols-2 items-start">
+    <nav class="container pt-10 pb-7 grid md:grid-cols-2 gap-10 items-start">
       <div class="grid place-items-start gap-3 h-full">
         <LayoutLogo />
         <div class="flex flex-wrap gap-2 mt-auto">
@@ -33,7 +33,6 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
               <NavigationMenuItem
                 v-for="{ name: linkName, to } in links"
                 :key="to"
-                as-child
               >
                 <NuxtLink :class="navigationMenuTriggerStyle()" :to>
                   {{ linkName }}

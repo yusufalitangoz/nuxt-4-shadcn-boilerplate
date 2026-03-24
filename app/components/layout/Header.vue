@@ -14,11 +14,7 @@ const availableLocales = computed(() =>
   <DefineNavigationMenu v-slot="{ sheetClose }">
     <NavigationMenu class="items-start">
       <NavigationMenuList>
-        <NavigationMenuItem
-          v-for="{ name, to } in general.links"
-          :key="to"
-          as-child
-        >
+        <NavigationMenuItem v-for="{ name, to } in general.links" :key="to">
           <SheetClose v-if="sheetClose">
             <NuxtLink :class="navigationMenuTriggerStyle()" :to>
               {{ name }}

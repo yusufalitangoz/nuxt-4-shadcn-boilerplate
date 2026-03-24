@@ -44,6 +44,7 @@ const showPassword = ref(false);
     <Button
       v-if="type === 'password'"
       class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-foreground"
+      aria-label="Toggle"
       variant="link"
       type="button"
       size="icon"
