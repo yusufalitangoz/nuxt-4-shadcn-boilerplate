@@ -11,6 +11,8 @@ definePageMeta({
 
 const loading = ref(false);
 
+z.config({ jitless: true });
+
 const validationSchema = toTypedSchema(
   z.object({
     name: z.string().min(5).max(32),
@@ -86,7 +88,7 @@ const onSubmit = handleSubmit(async (values) => {
                   id="example-form-name"
                   :aria-invalid="!!errors.length"
                   placeholder="Your name"
-                  type="password"
+                  autocomplete="name"
                   v-bind="field"
                 />
                 <FieldError v-if="errors.length" :errors />
