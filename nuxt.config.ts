@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     families: [
       {
         weights: ["400 600"],
-        name: "Roboto",
+        name: "Inter",
         global: true,
       },
     ],
