@@ -54,5 +54,8 @@
     "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6",
     "wrangler": "^4.77.0"
+  },
+  "overrides": {
+    "nuxt-og-image": "6.2.2"
   }
 }
