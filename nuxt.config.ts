@@ -34,6 +34,12 @@ export default defineNuxtConfig({
       },
     ],
   },
+  nitro: {
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
+  },
   llms: {
     title: "Nuxt 4 + Shadcn Boilerplate",
     description:

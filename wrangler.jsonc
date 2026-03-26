@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nuxt-4-shadcn-boilerplate",
-  "assets": { "directory": "./.output/public/", "binding": "ASSETS" },
   "vars": {
     "NUXT_PUBLIC_I18N_BASE_URL": "https://boilerplate.yali.dev",
     "NUXT_LLMS_DOMAIN": "https://boilerplate.yali.dev",
