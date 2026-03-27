@@ -15,7 +15,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/fontaine": "^0.5.0",
     "@nuxtjs/i18n": "^10.2.4",
-    "@nuxtjs/seo": "^4.0.2",
+    "@nuxtjs/seo": "^5.0.2",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/vite": "^4.2.2",
     "@takumi-rs/core": "^0.73.1",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.2.7",
-    "@iconify-json/lucide": "^1.2.98",
+    "@iconify-json/lucide": "^1.2.99",
     "@nuxt/eslint": "^1.15.2",
     "@nuxt/icon": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.0",
@@ -54,9 +54,6 @@
     "prettier": "^3.8.1",
     "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6",
-    "wrangler": "^4.77.0"
-  },
-  "overrides": {
-    "nuxt-og-image": "6.2.2"
+    "wrangler": "^4.78.0"
   }
 }
