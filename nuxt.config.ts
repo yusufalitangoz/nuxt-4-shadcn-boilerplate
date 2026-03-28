@@ -38,6 +38,13 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
+      wrangler: {
+        name: "nuxt-4-shadcn-boilerplate",
+        vars: {
+          NUXT_PUBLIC_I18N_BASE_URL: "https://boilerplate.yali.dev",
+          NUXT_LLMS_DOMAIN: "https://boilerplate.yali.dev",
+        },
+      },
     },
   },
   llms: {
