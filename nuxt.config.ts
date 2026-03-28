@@ -44,6 +44,10 @@ export default defineNuxtConfig({
           NUXT_PUBLIC_I18N_BASE_URL: "https://boilerplate.yali.dev",
           NUXT_LLMS_DOMAIN: "https://boilerplate.yali.dev",
         },
+        assets: {
+          binding: "ASSETS",
+          directory: ".output/public",
+        },
       },
     },
   },
