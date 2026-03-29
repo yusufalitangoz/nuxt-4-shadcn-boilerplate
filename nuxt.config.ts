@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     ],
   },
   nitro: {
+    preset: "cloudflare-module",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
@@ -44,9 +45,11 @@ export default defineNuxtConfig({
           NUXT_PUBLIC_I18N_BASE_URL: "https://boilerplate.yali.dev",
           NUXT_LLMS_DOMAIN: "https://boilerplate.yali.dev",
         },
-        assets: {
-          binding: "ASSETS",
-          directory: ".output/public",
+        observability: {
+          logs: {
+            invocation_logs: true,
+            enabled: true,
+          },
         },
       },
     },
