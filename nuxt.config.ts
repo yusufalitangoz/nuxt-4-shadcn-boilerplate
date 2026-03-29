@@ -45,12 +45,6 @@ export default defineNuxtConfig({
           NUXT_PUBLIC_I18N_BASE_URL: "https://boilerplate.yali.dev",
           NUXT_LLMS_DOMAIN: "https://boilerplate.yali.dev",
         },
-        observability: {
-          logs: {
-            invocation_logs: true,
-            enabled: true,
-          },
-        },
       },
     },
   },
