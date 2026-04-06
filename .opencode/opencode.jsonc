@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "nuxt": {
+      "url": "https://nuxt.com/mcp",
+      "type": "remote",
+      "enabled": true,
+    },
+    "shadcnVue": {
+      "command": ["npx", "shadcn-vue@latest", "mcp"],
+      "type": "local",
+      "enabled": true,
+    },
+  },
+}
