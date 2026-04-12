@@ -426,6 +426,11 @@ export default defineNuxtConfig({
   robots: {
     blockNonSeoBots: true,
   },
+  veeValidate: {
+    componentNames: {
+      Field: "VeeField",
+    },
+  },
   typescript: {
     typeCheck: true,
   },

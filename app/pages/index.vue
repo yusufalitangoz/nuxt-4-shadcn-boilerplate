@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Field as VeeField } from "vee-validate";
 import packageJson from "../../package.json";
 import { toast } from "vue-sonner";
 import { z } from "zod";
