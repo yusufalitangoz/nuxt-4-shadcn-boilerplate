@@ -94,6 +94,7 @@ bun dev
 ## 📁 Project Structure
 
 ```
+├── .opencode/                  # OpenCode config
 ├── app/
 │   ├── app.vue                 # Main app component
 │   ├── error.vue               # Error page
