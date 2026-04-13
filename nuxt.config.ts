@@ -53,11 +53,6 @@ export default defineNuxtConfig({
         ],
       },
     },
-    routeRules: {
-      "/": {
-        prerender: true,
-      },
-    },
   },
   aiReady: {
     llmsTxt: {
@@ -418,7 +413,13 @@ export default defineNuxtConfig({
       aiInput: true,
       search: true,
     },
+    runtimeSync: {
+      batchSize: 20,
+      pruneTtl: 0,
+      ttl: 3600,
+    },
     indexNow: true,
+    cron: true,
   },
   i18n: {
     defaultLocale: "tr",
