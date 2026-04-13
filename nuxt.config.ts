@@ -53,6 +53,11 @@ export default defineNuxtConfig({
         ],
       },
     },
+    routeRules: {
+      "/": {
+        prerender: true,
+      },
+    },
   },
   aiReady: {
     llmsTxt: {
