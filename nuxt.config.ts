@@ -455,6 +455,11 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
+  ogImage: {
+    security: {
+      strict: true,
+    },
+  },
   devtools: {
     enabled: true,
   },
