@@ -79,7 +79,7 @@ bun i
 3. Create `.env` file and write the values ​​from `.env.example`:
 
 ```bash
-NUXT_NUXT_OG_IMAGE_SECURITY_SECRET="your-secret-key"
+NUXT_OG_IMAGE_SECURITY_SECRET="your-secret-key"
 NUXT_PUBLIC_I18N_BASE_URL="http://localhost:3000"
 ```
 
