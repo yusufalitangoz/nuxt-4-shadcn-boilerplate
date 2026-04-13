@@ -80,6 +80,7 @@ bun i
 
 ```bash
 NUXT_PUBLIC_I18N_BASE_URL="http://localhost:3000"
+NUXT_OG_IMAGE_SECRET="your-secret-key"
 ```
 
 4. Start development:

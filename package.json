@@ -25,6 +25,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "nuxt": "^4.4.2",
+    "nuxt-ai-ready": "^1.1.2",
     "nuxt-security": "^2.5.1",
     "nuxt-svgo": "^4.2.6",
     "nuxt-vitalizer": "^2.0.0",
