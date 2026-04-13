@@ -37,8 +37,6 @@ export default defineNuxtConfig({
   nitro: {
     preset: "cloudflare-module",
     cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
       wrangler: {
         name: "nuxt-4-shadcn-boilerplate",
         vars: {
@@ -51,7 +49,13 @@ export default defineNuxtConfig({
             binding: "AI_READY_DB",
           },
         ],
+        observability: {
+          logs: { enabled: true, invocation_logs: true },
+          enabled: true,
+        },
       },
+      deployConfig: true,
+      nodeCompat: true,
     },
   },
   aiReady: {
