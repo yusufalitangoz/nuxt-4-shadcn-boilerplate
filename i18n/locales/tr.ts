@@ -1,11 +1,16 @@
 export default {
   nuxtSiteConfig: {
     name: "Nuxt 4 + Shadcn Başlangıç Şablonu",
-    description: "Shadcn ile Nuxt 4 başlangıç şablonu",
+    description: "Shadcn ile Nuxt 4 başlangıç şablonu.",
   },
   meta: {
     home: {
       title: "Ana Sayfa",
+      description: "Ana sayfa açıklaması.",
+    },
+    about: {
+      title: "Hakkımızda",
+      description: "Hakkımızda sayfası açıklaması.",
     },
   },
   error: {
@@ -19,7 +24,7 @@ export default {
   linkGroups: [
     {
       name: "Genel",
-      links: ["Ana Sayfa", "Hata Sayfası"],
+      links: ["Ana Sayfa", "Hakkımızda"],
     },
     {
       name: "Sosyal Medya",

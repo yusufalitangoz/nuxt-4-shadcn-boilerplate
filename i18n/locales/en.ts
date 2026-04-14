@@ -1,11 +1,16 @@
 export default {
   nuxtSiteConfig: {
     name: "Nuxt 4 + Shadcn Boilerplate",
-    description: "Nuxt 4 boilerplate with Shadcn",
+    description: "Nuxt 4 boilerplate with Shadcn.",
   },
   meta: {
     home: {
       title: "Home",
+      description: "Home page description.",
+    },
+    about: {
+      title: "About",
+      description: "About page description.",
     },
   },
   error: {
@@ -19,7 +24,7 @@ export default {
   linkGroups: [
     {
       name: "General",
-      links: ["Home", "Error Page"],
+      links: ["Home", "About"],
     },
     {
       name: "Social Media",

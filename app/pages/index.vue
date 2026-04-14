@@ -4,7 +4,7 @@ import { toast } from "vue-sonner";
 import { z } from "zod";
 
 definePageMeta({
-  description: "nuxtSiteConfig.description",
+  description: "meta.home.description",
   title: "meta.home.title",
 });
 

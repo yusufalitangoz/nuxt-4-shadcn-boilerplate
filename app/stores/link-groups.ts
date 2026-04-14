@@ -6,7 +6,7 @@ export const useLinkGroupsStore = defineStore("link-groups", () => {
     name: t("linkGroups.0.name"),
     links: [
       { name: t("linkGroups.0.links.0"), to: localePath("/") },
-      { name: t("linkGroups.0.links.1"), to: localePath("/error") },
+      { name: t("linkGroups.0.links.1"), to: localePath("/about") },
     ],
   }));
 
