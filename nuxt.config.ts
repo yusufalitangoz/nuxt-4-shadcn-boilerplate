@@ -417,13 +417,8 @@ export default defineNuxtConfig({
       aiInput: true,
       search: true,
     },
-    runtimeSync: {
-      batchSize: 20,
-      pruneTtl: 0,
-      ttl: 3600,
-    },
+    runtimeSync: true,
     indexNow: true,
-    cron: true,
   },
   i18n: {
     defaultLocale: "tr",
