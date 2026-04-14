@@ -11,5 +11,10 @@
       "type": "local",
       "enabled": true,
     },
+    "nuxt-seo": {
+      "url": "https://nuxtseo.com/mcp",
+      "type": "remote",
+      "enabled": true,
+    },
   },
 }
