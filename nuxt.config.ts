@@ -442,6 +442,12 @@ export default defineNuxtConfig({
       },
     ],
   },
+  ogImage: {
+    security: {
+      secret: "override-at-runtime",
+      strict: true,
+    },
+  },
   robots: {
     blockNonSeoBots: true,
   },
@@ -456,11 +462,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["types"],
   },
-  ogImage: {
-    security: {
-      strict: true,
-    },
-  },
+
   devtools: {
     enabled: true,
   },
