@@ -456,9 +456,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["types"],
   },
-  colorMode: {
-    classSuffix: "",
-  },
   ogImage: {
     security: {
       strict: true,
