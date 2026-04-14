@@ -457,7 +457,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["types"],
   },
-
   devtools: {
     enabled: true,
   },
