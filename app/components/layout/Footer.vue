@@ -5,36 +5,36 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
 </script>
 
 <template>
-  <footer class="border-t w-full text-sm">
-    <nav class="container pt-10 pb-7 grid md:grid-cols-2 gap-10 items-start">
-      <div class="grid place-items-start gap-3 h-full">
-        <LayoutLogo />
-        <div class="flex flex-wrap gap-2 mt-auto">
-          <Button
-            v-for="{ name, icon, to } in social.links"
-            :key="icon"
-            :aria-label="name"
-            variant="outline"
-            class="size-8"
-            size="icon"
-            as-child
-          >
-            <NuxtLink target="_blank" :to>
-              <Icon :name="icon!" />
-            </NuxtLink>
-          </Button>
+  <footer class="border-t w-full text-sm bg-background/50 backdrop-blur-sm">
+    <div class="container pt-12 pb-8">
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div class="md:col-span-1 space-y-4">
+          <LayoutLogo />
+          <p class="text-muted-foreground text-xs leading-relaxed max-w-50">
+            {{ $t("nuxtSiteConfig.description") }}
+          </p>
         </div>
-      </div>
-      <div class="flex flex-wrap gap-10 md:justify-end">
-        <div v-for="{ name, links } in [general]" :key="name" class="space-y-3">
-          <h1 class="font-medium text-muted-foreground">{{ name }}</h1>
+        <div
+          v-for="{ name, links } in [general, social]"
+          :key="name"
+          class="space-y-4"
+        >
+          <h1 class="font-medium">{{ name }}</h1>
           <NavigationMenu>
             <NavigationMenuList class="grid -ml-4 gap-0">
               <NavigationMenuItem
-                v-for="{ name: linkName, to } in links"
+                v-for="{ name: linkName, to, icon } in links"
                 :key="to"
               >
-                <NuxtLink :class="navigationMenuTriggerStyle()" :to>
+                <NuxtLink
+                  :class="
+                    navigationMenuTriggerStyle({
+                      class: 'text-muted-foreground flex items-center gap-2',
+                    })
+                  "
+                  :to
+                >
+                  <Icon v-if="icon" :name="icon" />
                   {{ linkName }}
                 </NuxtLink>
               </NavigationMenuItem>
@@ -42,10 +42,14 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
           </NavigationMenu>
         </div>
       </div>
-      <Separator class="md:col-span-2 my-6" />
-      <span class="text-center md:col-span-2 text-muted-foreground">
-        © {{ new Date().getFullYear() }}
-      </span>
-    </nav>
+      <Separator class="my-8" />
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground"
+      >
+        <span>
+          © {{ new Date().getFullYear() }} | {{ $t("nuxtSiteConfig.name") }}
+        </span>
+      </div>
+    </div>
   </footer>
 </template>
