@@ -5,7 +5,7 @@ const { social, general } = storeToRefs(useLinkGroupsStore());
 </script>
 
 <template>
-  <footer class="border-t w-full text-sm bg-background/50 backdrop-blur-sm">
+  <footer class="border-t w-full text-sm bg-background">
     <div class="container pt-12 pb-8">
       <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
         <div class="md:col-span-1 space-y-4">
