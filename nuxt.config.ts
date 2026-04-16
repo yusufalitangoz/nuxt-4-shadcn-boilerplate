@@ -1,9 +1,8 @@
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
+    "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@vee-validate/nuxt",
     "@nuxtjs/fontaine",
@@ -13,18 +12,17 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/i18n",
     "@vueuse/nuxt",
+    "@nuxt/hints",
     "shadcn-nuxt",
     "@nuxt/image",
     "@nuxt/fonts",
     "@nuxtjs/seo",
     "@nuxt/icon",
+    "@nuxt/a11y",
     "nuxt-svgo",
   ],
   css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-03-22",
-  vite: {
-    plugins: [tailwindcss()],
-  },
   fonts: {
     families: [
       {
