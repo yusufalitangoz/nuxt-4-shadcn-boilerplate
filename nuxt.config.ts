@@ -419,6 +419,7 @@ export default defineNuxtConfig({
     },
     runtimeSync: true,
     indexNow: true,
+    cron: true,
   },
   i18n: {
     defaultLocale: "tr",
