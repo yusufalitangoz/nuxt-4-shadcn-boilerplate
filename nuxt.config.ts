@@ -37,9 +37,6 @@ export default defineNuxtConfig({
     cloudflare: {
       wrangler: {
         name: "nuxt-4-shadcn-boilerplate",
-        vars: {
-          NUXT_PUBLIC_I18N_BASE_URL: "https://boilerplate.yali.dev",
-        },
         d1_databases: [
           {
             database_id: "d33a4598-7226-41c4-86a6-b0d79f256baf",
@@ -420,6 +417,7 @@ export default defineNuxtConfig({
     cron: true,
   },
   i18n: {
+    baseUrl: process.env.BASE_URL,
     defaultLocale: "tr",
     locales: [
       {
@@ -438,7 +436,7 @@ export default defineNuxtConfig({
   },
   ogImage: {
     security: {
-      secret: "override-at-runtime",
+      secret: process.env.OG_IMAGE_SECRET,
       strict: true,
     },
   },
