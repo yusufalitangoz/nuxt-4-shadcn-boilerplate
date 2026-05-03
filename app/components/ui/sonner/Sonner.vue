@@ -15,24 +15,24 @@ const props = withDefaults(defineProps<ToasterProps>(), {
     :theme="$colorMode.preference as Theme"
   >
     <template #success-icon>
-      <Icon name="lucide:circle-check" class="size-4" />
+      <Icon name="lucide:circle-check" class="size-3" />
     </template>
     <template #info-icon>
-      <Icon name="lucide:info" class="size-4" />
+      <Icon name="lucide:info" class="size-3" />
     </template>
     <template #warning-icon>
-      <Icon name="lucide:triangle-alert" class="size-4" />
+      <Icon name="lucide:triangle-alert" class="size-3" />
     </template>
     <template #error-icon>
-      <Icon name="lucide:octagon-x" class="size-4" />
+      <Icon name="lucide:octagon-x" class="size-3" />
     </template>
     <template #loading-icon>
       <div>
-        <Icon name="lucide:loader" class="size-4 animate-spin" />
+        <Icon name="lucide:loader" class="size-3 animate-spin" />
       </div>
     </template>
     <template #close-icon>
-      <Icon name="lucide:x" class="size-4" />
+      <Icon name="lucide:x" class="size-3" />
     </template>
   </Sonner>
 </template>
