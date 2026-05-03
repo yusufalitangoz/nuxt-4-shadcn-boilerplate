@@ -21,7 +21,6 @@ export default defineNuxtConfig({
     "@nuxt/a11y",
     "nuxt-svgo",
   ],
-  css: ["~/assets/css/tailwind.css"],
   compatibilityDate: "2026-03-22",
   fonts: {
     families: [
