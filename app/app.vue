@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import "vue-sonner/style.css";
-
 const head = useLocaleHead();
 const { t, te } = useI18n();
 const route = useRoute();
