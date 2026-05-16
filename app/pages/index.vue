@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import packageJson from "../../package.json";
-import { toast } from "vue-sonner";
 import { z } from "zod";
 
 definePageMeta({
   description: "meta.home.description",
   title: "meta.home.title",
 });
-
-const loading = ref(false);
 
 z.config({ jitless: true });
 
@@ -17,17 +14,18 @@ const validationSchema = toTypedSchema(
     name: z.string().min(5).max(32),
   }),
 );
-
 const { handleSubmit, resetForm } = useForm({
   validationSchema,
 });
+const { $toast } = useNuxtApp();
+const loading = ref(false);
 
 const onSubmit = handleSubmit(async (values) => {
   loading.value = true;
   await new Promise((resolve) => setTimeout(resolve, 1000));
   loading.value = false;
 
-  toast("Form Submitted!", {
+  $toast("Form Submitted!", {
     description: JSON.stringify(values),
   });
 });

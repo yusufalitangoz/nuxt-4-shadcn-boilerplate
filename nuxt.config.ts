@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vee-validate/nuxt",
     "@nuxtjs/fontaine",
+    "vue-sonner/nuxt",
     "nuxt-vitalizer",
     "nuxt-security",
     "nuxt-ai-ready",

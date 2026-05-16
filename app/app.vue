@@ -42,7 +42,7 @@ defineOgImage("Default", {
       <NuxtLoadingIndicator />
       <NuxtRouteAnnouncer />
       <ClientOnly>
-        <Toaster />
+        <SonnerToaster />
       </ClientOnly>
       <NuxtLayout>
         <NuxtPage />
