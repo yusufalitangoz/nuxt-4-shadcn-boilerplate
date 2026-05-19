@@ -58,8 +58,7 @@ A modern, full-featured boilerplate for building web applications with Nuxt 4 an
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org)
-- [Bun](https://bun.sh)
+- [Bun](https://bun.sh) (recommended) or [Node.js](https://nodejs.org)
 
 ### Installation & Configuration
 
