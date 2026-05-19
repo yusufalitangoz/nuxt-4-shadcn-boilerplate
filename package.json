@@ -19,15 +19,15 @@
     "@nuxtjs/i18n": "^10.3.0",
     "@nuxtjs/seo": "^5.1.3",
     "@pinia/nuxt": "^0.11.3",
-    "@takumi-rs/core": "^1.1.2",
-    "@takumi-rs/wasm": "^1.1.2",
+    "@takumi-rs/core": "^1.2.1",
+    "@takumi-rs/wasm": "^1.2.1",
     "@vee-validate/nuxt": "^4.15.1",
     "@vee-validate/zod": "^4.15.1",
     "better-sqlite3": "^12.10.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "nuxt": "^4.4.5",
-    "nuxt-ai-ready": "^1.3.2",
+    "nuxt": "^4.4.6",
+    "nuxt-ai-ready": "^1.3.7",
     "nuxt-security": "^2.6.0",
     "nuxt-svgo": "^4.2.6",
     "nuxt-vitalizer": "^2.0.0",
@@ -56,7 +56,7 @@
     "prettier": "^3.8.3",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.9",
+    "vue-tsc": "^3.3.0",
     "wrangler": "^4.92.0"
   }
 }
