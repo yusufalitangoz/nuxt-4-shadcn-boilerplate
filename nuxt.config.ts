@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@vee-validate/nuxt",
-    "@nuxtjs/fontaine",
     "vue-sonner/nuxt",
     "nuxt-vitalizer",
     "nuxt-security",
@@ -332,12 +331,6 @@ export default defineNuxtConfig({
               href: "/",
               description:
                 "Font optimization with automatic font subsetting and display swap.",
-            },
-            {
-              title: "Nuxt Fontaine",
-              href: "/",
-              description:
-                "Font metrics fallback generation to prevent CLS from web fonts.",
             },
           ],
         },
