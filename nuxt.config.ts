@@ -451,7 +451,11 @@ export default defineNuxtConfig({
     enabled: true,
   },
   icon: {
+    serverBundle: "local",
     mode: "svg",
+    clientBundle: {
+      scan: true,
+    },
   },
   shadcn: {
     prefix: "",
