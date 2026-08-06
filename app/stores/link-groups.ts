@@ -15,17 +15,17 @@ export const useLinkGroupsStore = defineStore("link-groups", () => {
     links: [
       {
         to: "https://www.x.com",
-        icon: "bi:twitter-x",
+        icon: "simple-icons:x",
         name: "X",
       },
       {
         to: "https://www.instagram.com",
-        icon: "bi:instagram",
+        icon: "simple-icons:instagram",
         name: "Instagram",
       },
       {
         to: "https://www.linkedin.com",
-        icon: "bi:linkedin",
+        icon: "simple-icons:linkedin",
         name: "LinkedIn",
       },
     ],

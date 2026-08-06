@@ -68,7 +68,7 @@ const onSubmit = handleSubmit(async (values) => {
       </div>
     </div>
     <Card class="overflow-auto w-full p-0 sm:max-w-200">
-      <pre class="overflow-auto w-full p-6">{{ packageJson }}</pre>
+      <pre class="overflow-auto w-full p-6 text-sm">{{ packageJson }}</pre>
     </Card>
     <Card class="w-full sm:max-w-md mt-12">
       <CardHeader>

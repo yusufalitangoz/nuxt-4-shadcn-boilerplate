@@ -36,15 +36,11 @@ export default defineNuxtConfig({
     cloudflare: {
       wrangler: {
         name: "nuxt-4-shadcn-boilerplate",
-        d1_databases: [
-          {
-            database_id: "d33a4598-7226-41c4-86a6-b0d79f256baf",
-            database_name: "ai-ready-db",
-            binding: "AI_READY_DB",
-          },
-        ],
         observability: {
-          logs: { enabled: true, invocation_logs: true },
+          logs: {
+            invocation_logs: true,
+            enabled: true,
+          },
           enabled: true,
         },
       },
@@ -264,7 +260,7 @@ export default defineNuxtConfig({
               title: "Lucide Icons",
               href: "/",
               description:
-                "Icon library via @nuxt/icon in SVG mode. Includes lucide and bootstrap icon sets (bi, simple-icons).",
+                "Icon library via @nuxt/icon in SVG mode. Includes lucide and simple-icons.",
             },
             {
               title: "Nuxt Image",
@@ -397,17 +393,14 @@ export default defineNuxtConfig({
         "Repository: https://github.com/yusufalitangoz/nuxt-shadcn-boilerplate",
       ],
     },
-    database: {
-      bindingName: "AI_READY_DB",
-      type: "d1",
-    },
     contentSignal: {
-      aiInput: true,
+      aiInput: false,
+      aiTrain: false,
       search: true,
     },
+    runtimeSyncSecret: process.env.RUNTIME_SYNC_SECRET,
     runtimeSync: true,
     indexNow: true,
-    cron: true,
   },
   i18n: {
     baseUrl: process.env.BASE_URL,
@@ -441,6 +434,13 @@ export default defineNuxtConfig({
       Field: "VeeField",
     },
   },
+  icon: {
+    serverBundle: "local",
+    mode: "svg",
+    clientBundle: {
+      scan: true,
+    },
+  },
   typescript: {
     typeCheck: true,
   },
@@ -449,13 +449,6 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true,
-  },
-  icon: {
-    serverBundle: "local",
-    mode: "svg",
-    clientBundle: {
-      scan: true,
-    },
   },
   shadcn: {
     prefix: "",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const head = useLocaleHead();
+const localeHead = useLocaleHead();
 const { t, te } = useI18n();
 const route = useRoute();
 
@@ -13,6 +13,19 @@ const title = computed(() => {
   return value && te(value) ? t(value) : value;
 });
 
+useHead(() => ({
+  htmlAttrs: localeHead.value.htmlAttrs,
+  link: localeHead.value.link,
+  title: title.value,
+  meta: [
+    ...localeHead.value.meta,
+    {
+      content: description.value,
+      name: "description",
+    },
+  ],
+}));
+
 defineOgImage("Default", {
   description: description.value,
   title: title.value,
@@ -20,31 +33,14 @@ defineOgImage("Default", {
 </script>
 
 <template>
-  <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta :content="description" name="description" />
-      <template v-for="link in head.link" :key="link.id">
-        <Link
-          :id="link.id"
-          :hreflang="link.hreflang"
-          :href="link.href"
-          :rel="link.rel"
-        />
-      </template>
-      <template v-for="meta in head.meta" :key="meta.id">
-        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
-      </template>
-    </Head>
-    <Body>
-      <NuxtLoadingIndicator />
-      <NuxtRouteAnnouncer />
-      <ClientOnly>
-        <SonnerToaster />
-      </ClientOnly>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </Body>
-  </Html>
+  <div>
+    <NuxtLoadingIndicator />
+    <NuxtRouteAnnouncer />
+    <ClientOnly>
+      <SonnerToaster />
+    </ClientOnly>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>

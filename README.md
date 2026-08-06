@@ -78,6 +78,7 @@ bun i
 3. Create `.env` file and write the values ​​from `.env.example`:
 
 ```bash
+RUNTIME_SYNC_SECRET="your-secret-key"
 OG_IMAGE_SECRET="your-secret-key"
 BASE_URL="http://localhost:3000"
 ```
