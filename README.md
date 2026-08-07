@@ -34,8 +34,8 @@ A modern, full-featured boilerplate for building web applications with Nuxt 4 an
 
 ### UI & UX
 
-- **Icons**: [@nuxt/icon](https://github.com/nuxt-modules/icon)
-- **Fonts**: [@nuxt/fonts](https://github.com/nuxt-modules/fonts)
+- **Icons**: [@nuxt/icon](https://github.com/nuxt/icon)
+- **Fonts**: [@nuxt/fonts](https://github.com/nuxt/fonts)
 - **Images**: [@nuxt/image](https://image.nuxt.com)
 - **Notifications**: [Vue Sonner](https://vue-sonner.vercel.app)
 - **Color Mode**: [@nuxtjs/color-mode](https://github.com/nuxt-modules/color-mode)
@@ -51,8 +51,8 @@ A modern, full-featured boilerplate for building web applications with Nuxt 4 an
 
 - **Security**: [Nuxt Security](https://nuxt-security.vercel.app)
 - **SEO**: [@nuxtjs/seo](https://nuxtseo.com)
-- **SVG Optimization**: [Nuxt SVGO](https://github.com/nuxt-modules/svgo)
-- **Performance**: [Nuxt Vitalizer](https://github.com/nuxt-modules/vitalizer)
+- **SVG Optimization**: [Nuxt SVGO](https://github.com/cpsoinos/nuxt-svgo)
+- **Performance**: [Nuxt Vitalizer](https://github.com/johannschopplich/nuxt-vitalizer)
 
 ## 🚀 Getting Started
 
