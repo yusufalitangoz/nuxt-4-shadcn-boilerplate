@@ -1,3 +1,5 @@
+
+
 # Nuxt 4 + Shadcn Boilerplate
 
 A modern, full-featured boilerplate for building web applications with Nuxt 4 and Shadcn UI. This project provides a solid foundation with TypeScript, Tailwind CSS, internationalization, form validation, and more.
@@ -75,7 +77,9 @@ cd nuxt-4-shadcn-boilerplate
 bun i
 ```
 
-3. Create `.env` file and write the values ​​from `.env.example`:
+*(Use `npm install` if you prefer Node.js over Bun)*
+
+3. Create `.env` file and write the values from `.env.example`:
 
 ```bash
 RUNTIME_SYNC_SECRET="your-secret-key"
